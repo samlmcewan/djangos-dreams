@@ -1,0 +1,23 @@
+.chord-chart {
+	display: flex;
+	flex-direction: row;
+	// align-items: center;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	width: 20em;
+}
+
+.chord-chart-single {
+	padding: 20px;
+	margin: auto;
+}
+
+// .chord-chart-single:last-child {
+// 	// background-color: goldenrod;
+// 	margin-left: 1em;
+// }
+
+.chord-chart-heading {
+	display: block;
+	padding-bottom: 10px;
+}

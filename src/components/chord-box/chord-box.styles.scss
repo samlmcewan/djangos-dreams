@@ -1,0 +1,27 @@
+.chord-box {
+	background-color: #282c34;
+	height: 0;
+	width: 12.5%;
+	padding-bottom: 12.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid white;
+
+	&:nth-child(n + 9):nth-child(-n + 16) {
+		background-color: #353b45;
+	}
+
+	&:nth-child(n + 25):nth-child(-n + 32) {
+		background-color: #353b45;
+	}
+
+	.chord-note {
+		padding-top: 100%;
+	}
+}

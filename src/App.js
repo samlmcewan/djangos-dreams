@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import ChordChartContainer from './components/chord-chart-container/chord-chart-container.component';
+import SongData from './mock-data/data';
+
+const songs = SongData;
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <h1>Django's Dreams</h1>
+      <p>Chord charts of classic Django Reinhardt numbers</p>
       </header>
+      <main className="App-main">
+      <div className='container-main'>
+      <ChordChartContainer songs={songs} />
+      </div>
+      </main>
     </div>
   );
 }
