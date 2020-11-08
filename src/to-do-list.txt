@@ -1,7 +1,7 @@
-Create 1/4 size triangle/lines for boxes (bottom, right)
+make curved edges ? 1/4 size triangle/lines for boxes (bottom, right)
 
 chord diagrams on rollover
 
 homepage with title, photo, sound preview (from youtube?) on rollover. click to take to chord charts single page 
 
-
+fix lower triangle line of quarter box triangle responsive issue 
