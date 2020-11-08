@@ -146,7 +146,8 @@ p {
 
 		@media only screen and (max-width: 680px) {
 			&:after {
-				width: 27vw;
+				width: 29vw;
+				transform: rotate(133deg);
 			}
 		}
 	}

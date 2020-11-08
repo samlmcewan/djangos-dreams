@@ -17,13 +17,13 @@ const ChordBox = ({note}) => {
             <div className="chord-box-split">
 
                 <div className="chordbox-Left">
-                    <p className="chord-note half-left">{note.chordOne}</p>
+                    <p className="chord-note half-left"><div dangerouslySetInnerHTML={{ __html: note.chordOne }} /></p>
                 </div>
                 
                     <div className="half-line"></div>
 
                 <div className="chordbox-right">
-                    <p className="chord-note half-right">{note.chordTwo}</p>
+                    <p className="chord-note half-right"><div dangerouslySetInnerHTML={{ __html: note.chordTwo }} /></p>
                 </div>
                 
             </div>
@@ -34,7 +34,7 @@ else {
     
     return (
         <div className="chord-box">
-            <p className="chord-note">{note}</p>
+            <p className="chord-note"><div dangerouslySetInnerHTML={{ __html: note }} /></p>
         </div>
     );
 
