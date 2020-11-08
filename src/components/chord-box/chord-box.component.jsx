@@ -15,10 +15,16 @@ const ChordBox = ({note}) => {
             //     </div>
             // </div>
             <div className="chord-box-split">
-                
+
+                <div className="chordbox-Left">
                     <p className="chord-note half-left">{note.chordOne}</p>
+                </div>
+                
                     <div className="half-line"></div>
+
+                <div className="chordbox-right">
                     <p className="chord-note half-right">{note.chordTwo}</p>
+                </div>
                 
             </div>
         );

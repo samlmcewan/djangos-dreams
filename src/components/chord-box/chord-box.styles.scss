@@ -1,10 +1,18 @@
 p {
-	font-size: 1.25em;
+	font-size: 1.4rem;
 }
 
-// .chord-box-split p {
-// 	font-size: 1em;
-// }
+.chord-box-split p {
+	font-size: 1rem;
+}
+@media only screen and (max-width: 680px) {
+	p {
+		font-size: 0.9rem;
+	}
+	.chord-box-split p {
+		font-size: 0.6rem;
+	}
+}
 
 .chord-box {
 	background-color: #282c34;
@@ -106,18 +114,18 @@ p {
 	overflow: hidden;
 	position: relative;
 
-	.half-left {
+	.chordbox-Left {
 		text-align: left;
-		padding-top: 60%;
-		padding-left: 20%;
-		padding-right: 10px;
-		display: flex;
+		padding-top: 45%;
+		padding-right: 30%;
+		position: absolute;
 	}
 
-	.half-right {
+	.chordbox-right {
 		text-align: right;
-		padding-top: 150%;
-		padding-right: 10%;
+		padding-top: 145%;
+		padding-left: 35%;
+		position: absolute;
 	}
 
 	.half-line {
