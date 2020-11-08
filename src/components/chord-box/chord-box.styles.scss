@@ -10,7 +10,7 @@ p {
 		font-size: 0.9rem;
 	}
 	.chord-box-split p {
-		font-size: 0.6rem;
+		font-size: 0.5rem;
 	}
 }
 
@@ -124,7 +124,7 @@ p {
 	.chordbox-right {
 		text-align: right;
 		padding-top: 145%;
-		padding-left: 35%;
+		padding-left: 45%;
 		position: absolute;
 	}
 
@@ -147,7 +147,7 @@ p {
 		@media only screen and (max-width: 680px) {
 			&:after {
 				width: 29vw;
-				transform: rotate(133deg);
+				transform: rotate(135deg);
 			}
 		}
 	}

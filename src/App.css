@@ -18,7 +18,7 @@
 }
 
 .App-main {
-	text-align: left;
+	/* text-align: left; */
 	background-color: #282c34;
 	color: white;
 	display: flex;

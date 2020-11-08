@@ -1,7 +1,5 @@
 Create 1/4 size triangle/lines for boxes (bottom, right)
 
-superscript sharps, flats and diminished (accidentals)
-
 chord diagrams on rollover
 
 homepage with title, photo, sound preview (from youtube?) on rollover. click to take to chord charts single page 
