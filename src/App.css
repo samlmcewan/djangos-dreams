@@ -2,17 +2,6 @@
 	text-align: center;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
-}
-
 .App-header {
 	background-color: #282c34;
 	min-height: 20vh;
@@ -39,6 +28,12 @@
 
 .container-main {
 	align-content: center;
-	padding: 50px;
+	/* padding: 50px; */
 	background-color: #16181d;
+}
+
+@media only screen and (max-width: 680px) {
+	.App-header {
+		min-width: 100vw;
+	}
 }

@@ -1,3 +1,11 @@
+p {
+	font-size: 1.25em;
+}
+
+// .chord-box-split p {
+// 	font-size: 1em;
+// }
+
 .chord-box {
 	background-color: #282c34;
 	height: 0;
@@ -12,6 +20,61 @@
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	border: 1px solid white;
+	overflow: hidden;
+	position: relative;
+
+	// .half-left {
+	// 	text-align: left;
+	// 	padding-top: 0%;
+	// }
+
+	// .half-right {
+	// 	text-align: right;
+	// 	padding-bottom: 0;
+	// }
+
+	// .half-line {
+	// 	// border-top: 1px solid white;
+	// 	width: 12.5%;
+	// 	height: 12.5%;
+	// 	position: absolute;
+	// 	z-index: 1;
+
+	// 	&:after {
+	// 		content: "";
+	// 		position: absolute;
+	// 		border-top: 1px solid white;
+	// 		width: 200px;
+	// 		transform: rotate(135deg);
+	// 		transform-origin: 25% 25%;
+	// 	}
+	// }
+
+	// .chord-box-half-one {
+
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: 0;
+	// 	height: 0;
+	// 	border: 3em solid olive;
+	// 	border-top-color: transparent;
+	// 	border-left-color: transparent;
+	// 	position: absolute;
+	// 	z-index: 1;
+	// }
+
+	// .chord-box-half-two {
+
+	// 	top: 0;
+	// 	right: 0;
+	// 	width: 0;
+	// 	height: 0;
+	// 	border: 3em solid green;
+	// 	border-bottom-color: transparent;
+	// 	border-right-color: transparent;
+	// 	position: absolute;
+	// 	z-index: 1;
+	// }
 
 	&:nth-child(n + 9):nth-child(-n + 16) {
 		background-color: #353b45;
@@ -23,5 +86,79 @@
 
 	.chord-note {
 		padding-top: 100%;
+	}
+}
+
+.chord-box-split {
+	background-color: #282c34;
+	height: 0;
+	width: 12.5%;
+	padding-bottom: 12.5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	align-content: center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid white;
+	overflow: hidden;
+	position: relative;
+
+	.half-left {
+		text-align: left;
+		padding-top: 60%;
+		padding-left: 20%;
+		padding-right: 10px;
+		display: flex;
+	}
+
+	.half-right {
+		text-align: right;
+		padding-top: 150%;
+		padding-right: 10%;
+	}
+
+	.half-line {
+		// border-top: 1px solid white;
+		width: 12.5%;
+		height: 12.5%;
+		position: absolute;
+		z-index: 1;
+
+		&:after {
+			content: "";
+			position: absolute;
+			border-top: 2px solid white;
+			width: 200px;
+			transform: rotate(135deg);
+			transform-origin: 25% 25%;
+		}
+
+		@media only screen and (max-width: 680px) {
+			&:after {
+				width: 27vw;
+			}
+		}
+	}
+
+	&:nth-child(n + 9):nth-child(-n + 16) {
+		background-color: #353b45;
+	}
+
+	&:nth-child(n + 25):nth-child(-n + 32) {
+		background-color: #353b45;
+	}
+}
+@media only screen and (max-width: 680px) {
+	.chord-box {
+		font-size: calc(5px + 2vmin);
+	}
+	.chord-box-split {
+		font-size: calc(3px + 2vmin);
+		.half-left {
+			padding-right: 10%;
+		}
 	}
 }
