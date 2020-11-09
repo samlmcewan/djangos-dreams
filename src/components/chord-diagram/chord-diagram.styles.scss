@@ -1,0 +1,46 @@
+.chord-diagram-container {
+	padding: 30px;
+}
+
+.chord-diagram-box {
+	border-top: 15px solid white;
+	border-bottom: 2px solid white;
+	width: 400px;
+	height: 500px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	.fret-box {
+		width: inherit;
+		height: inherit;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		justify-content: space-evenly;
+
+		.fret {
+			border-top: 2px solid white;
+			width: inherit;
+			// padding-bottom: 20px;
+		}
+	}
+
+	.guitar-string {
+		border-right: 2px solid white;
+		height: inherit;
+	}
+}
+
+// .fret-box {
+// 	width: 400px;
+// 	height: 500px;
+// 	// display: flex;
+// 	// flex-direction: column;
+// 	// justify-content: space-between;
+
+// 	.fret {
+// 		border-top: 2px solid white;
+// 		width: 400px;
+// 	}
+// }
