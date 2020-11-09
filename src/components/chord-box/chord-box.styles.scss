@@ -16,7 +16,7 @@ p {
 }
 
 .chord-box {
-	background-color: #282c34;
+	// background-color: #282c34;
 	height: 0;
 	width: 12.5%;
 	padding-bottom: 12.5%;
@@ -86,11 +86,11 @@ p {
 	// }
 
 	&:nth-child(n + 9):nth-child(-n + 16) {
-		background-color: #353b45;
+		background-color: #282c34;
 	}
 
 	&:nth-child(n + 25):nth-child(-n + 32) {
-		background-color: #353b45;
+		background-color: #282c34;
 	}
 
 	.chord-note {
@@ -99,7 +99,7 @@ p {
 }
 
 .chord-box-split {
-	background-color: #282c34;
+	// background-color: #282c34;
 	height: 0;
 	width: 12.5%;
 	padding-bottom: 12.5%;
@@ -212,11 +212,11 @@ p {
 	}
 
 	&:nth-child(n + 9):nth-child(-n + 16) {
-		background-color: #353b45;
+		background-color: #282c34;
 	}
 
 	&:nth-child(n + 25):nth-child(-n + 32) {
-		background-color: #353b45;
+		background-color: #282c34;
 	}
 }
 @media only screen and (max-width: 680px) {

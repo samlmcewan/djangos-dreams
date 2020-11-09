@@ -1,6 +1,6 @@
 .chord-diagram-container {
 	padding: 4vw;
-	padding-bottom: 17vw;
+	// padding-bottom: 17vw;
 	// width: 17vw;
 	width: fit-content;
 	// height: 20.75vw;
@@ -126,7 +126,7 @@
 	}
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 1080px) {
 	.chord-diagram-container {
 		.chord-name {
 			margin: auto;
