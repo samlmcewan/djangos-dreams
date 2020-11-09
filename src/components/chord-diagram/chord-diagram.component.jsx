@@ -67,24 +67,24 @@ const ChordDiagram = (positions) => {
 
     return (
         <div className="chord-diagram-container">
-        <div className="chord-name">F#m7♭5</div>
-        <div className="string-x-o-container">
-        {renderedStringXOs}
-        </div>
-            <div className="chord-diagram-box">
-                <div className="finger-dots">
-                {renderedFingerDots}
-                </div>
-                <div className="fret-box">
-                {renderedFrets}
-                </div>
-                {renderedStrings}
-                
-             
+            <div className="chord-name">F#m7♭5</div>
+            <div className="string-x-o-container">
+            {renderedStringXOs}
             </div>
-            
+                <div className="chord-diagram-box">
+                    <div className="finger-dots">
+                    {renderedFingerDots}
+                    </div>
+                    <div className="fret-box">
+                    {renderedFrets}
+                    </div>
+                    {renderedStrings}
+                    
                 
-        </div>
+                </div>
+                
+                    
+            </div>
     );
 
 
