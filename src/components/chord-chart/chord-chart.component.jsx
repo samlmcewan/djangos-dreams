@@ -1,6 +1,6 @@
 import ChordBox from '../chord-box/chord-box.component';
 
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid';
 
 import './chord-chart.styles.scss';
 

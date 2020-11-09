@@ -1,34 +1,121 @@
 .chord-diagram-container {
-	padding: 30px;
-}
+	padding: 4vw;
+	padding-bottom: 7vw;
+	width: 17vw;
+	height: 20.75vw;
 
-.chord-diagram-box {
-	border-top: 15px solid white;
-	border-bottom: 2px solid white;
-	width: 400px;
-	height: 500px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	.chord-name {
+		text-align: center;
+		margin-left: -10%;
+		font-size: 2rem;
+		padding-bottom: 1rem;
 
-	.fret-box {
-		width: inherit;
-		height: inherit;
+		// width: inherit;
+		// margin-left: -2%;
+	}
+
+	.string-x-o-container {
 		display: flex;
-		flex-direction: column;
-		position: absolute;
-		justify-content: space-evenly;
+		flex-direction: row;
+		width: 15vw;
+		justify-content: space-between;
 
-		.fret {
-			border-top: 2px solid white;
-			width: inherit;
-			// padding-bottom: 20px;
+		#e6xo {
+			margin-left: -2%;
+		}
+
+		#a5xo {
+			margin-left: 0.9%;
+		}
+
+		#d4xo {
+			margin-left: .5%;
+		}
+
+		#g3xo {
+			margin-left: 0.6%;
+			margin-right: 0.5%;
+		}
+
+		#b2xo {
+			margin-right: 0.7%;
+		}
+
+		#e1xo {
+			margin-right: -1.8%;
 		}
 	}
 
-	.guitar-string {
-		border-right: 2px solid white;
-		height: inherit;
+	.chord-diagram-box {
+		border-top: 0.56vw solid white;
+		border-bottom: 2px solid white;
+		width: 15vw;
+		height: 18.75vw;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.fret-box {
+			width: inherit;
+			height: inherit;
+			display: flex;
+			flex-direction: column;
+			position: absolute;
+			justify-content: space-evenly;
+
+			.fret {
+				border-top: 2px solid white;
+				width: inherit;
+				opacity: 60%;
+				// padding-bottom: 20px;
+			}
+		}
+
+		.guitar-string {
+			border-right: 2px solid white;
+			height: inherit;
+		}
+
+		.finger-dots {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			flex-wrap: wrap;
+			width: inherit;
+			height: inherit;
+
+			.dot {
+				width: 12.5%;
+				height: 10%;
+				border-radius: 50%;
+				background-color: white;
+
+				margin-left: 8.5%;
+				margin-right: 6.15%;
+				margin-bottom: 6%;
+				margin-top: 6.25%;
+			}
+
+			.e6 {
+				margin-left: -6%;
+			}
+			.a5 {
+				margin-left: 1%;
+			}
+			.d4 {
+				margin-left: 1.5%;
+			}
+			.g3 {
+				margin-left: 1.4%;
+			}
+			.b2 {
+				margin-left: 0.9%;
+			}
+			.e1 {
+				margin-left: 1.3%;
+			}
+		}
 	}
 }
 
