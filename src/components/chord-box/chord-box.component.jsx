@@ -22,8 +22,7 @@ const ChordBox = ({note}) => {
                         <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne }} /></p>
                     </div>
                     
-                        <div className="short-line-top"></div>
-                        <div className="short-line-bottom"></div>
+                        <div className='quarter-triangle'></div>
     
                     <div className="chordbox-quarter">
                         <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwoShort }} /></p>

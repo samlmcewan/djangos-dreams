@@ -115,6 +115,20 @@ p {
 	overflow: hidden;
 	position: relative;
 
+	.quarter-triangle {
+		height: 112.5%;
+		width: 112.5%;
+		padding-bottom: 100%;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		border: 2px solid white;
+		overflow: hidden;
+		// position: absolute;
+		transform: rotate(45deg);
+		transform-origin: 25% 155%;
+	}
+
 	.chordbox-Left {
 		text-align: left;
 		padding-top: 45%;
