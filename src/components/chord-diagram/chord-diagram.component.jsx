@@ -67,6 +67,8 @@ const ChordDiagram = (positions) => {
 
     return (
         <div className="chord-diagram-container">
+            <div className="fret-title"><em>Fret</em></div>
+            <div className="first-fret-number"><em>5</em></div>
             <div className="chord-name">F#m7♭5</div>
             <div className="string-x-o-container">
             {renderedStringXOs}
