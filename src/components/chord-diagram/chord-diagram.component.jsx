@@ -20,10 +20,10 @@ const ChordDiagram = () => {
         const g3 = fingerDots.filter(dot => dot.guitarString === 'g3');
         const b2 = fingerDots.filter(dot => dot.guitarString === 'b2');
         const e1 = fingerDots.filter(dot => dot.guitarString === 'e1');
+
+        // console.log(e6);
                
         // filter through dots that match position fret and push to new array chordDots
-
-
         let chordDots = [];
 
         const chordDotE6 = e6.filter(gfret => gfret.fret === positions[0]);
@@ -47,7 +47,7 @@ const ChordDiagram = () => {
 
         // assign visible values to dots in fingerDots that match the value of the strFret value in chordDotsStrFret array 
         const selectedFingerDots = fingerDots.map((o) => chordDotsStrFret.includes(o.strFret) ? Object.assign({}, o, {isVisible: 'visible'}) : o);
-        console.log(selectedFingerDots);
+        // console.log(selectedFingerDots);
 
         // map selectedFingerDots and conditionally render visible class
         const renderedFingerDots = selectedFingerDots.map(dot => 
@@ -60,9 +60,31 @@ const ChordDiagram = () => {
 
 
     const getXos = (positions) => { 
+
+        // assign position values to xo key value 
         
-           return stringXOs.map(stringChar => <div className='string-char' id={`${stringChar.str}xo`} key={nanoid()}>{stringChar.xo}</div>)  
+        
+        const e6 = stringXOs[0];
+        const a5 = stringXOs[1]; // {str: "a5", xo: "x"}
+        const d4 = stringXOs[2];
+        const g3 = stringXOs[3];
+        const b2 = stringXOs[4];
+        const e1 = stringXOs[5];
+
+        e6.xo = positions[0];
+        a5.xo = positions[1];
+        d4.xo = positions[2];
+        g3.xo = positions[3];
+        b2.xo = positions[4];
+        e1.xo = positions[5];
+
+        // map over stringXOs array xo values and conditionally render X or O or nothing 
+        return stringXOs.map((o) => o.xo === 'x' || o.xo === 'o' ? <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div> : <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}></div> )
+
+        //    return stringXOs.map((o) => {if (o.xo === !NaN) {return <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}> </div>} else {return <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div>}})  
         }
+
+        
     ;
     const renderedStringXOs = getXos('2x12ox');
    

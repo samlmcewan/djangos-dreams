@@ -182,6 +182,10 @@
 
 		.string-x-o-container {
 			width: auto;
+
+			.string-char .hidden {
+				visibility: hidden;
+			}
 		}
 	}
 }
