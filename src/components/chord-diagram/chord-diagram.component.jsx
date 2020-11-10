@@ -82,8 +82,6 @@ const ChordDiagram = () => {
 
         chordDots.push(chordDotE6, chordDotA5, chordDotD4, chordDotG3, chordDotB2, chordDotE1);
 
-        // chordDots.forEach(chord => chord.isVisible = 'visible');
-
         // console.log(chordDots[0][0].strFret);
 
         // get strFret value from chordDots array and push to new array chorDotsStrFret
@@ -94,11 +92,21 @@ const ChordDiagram = () => {
             }
         }
         
-        console.log(chordDotsStrFret);
+        // console.log(chordDotsStrFret);
 
         // assign visible values to dots in fingerDots that match the value of the strFret value in chordDotsStrFret array 
-        const selectedfingerDots = fingerDots.map((o) => chordDotsStrFret.includes(o.strFret) ? Object.assign({}, o, {isVisible: 'visible'}) : o);
-        console.log(selectedfingerDots);
+        const selectedFingerDots = fingerDots.map((o) => chordDotsStrFret.includes(o.strFret) ? Object.assign({}, o, {isVisible: 'visible'}) : o);
+        console.log(selectedFingerDots);
+
+        // map selectedFingerDots and conditionally render visible class
+        const renderedFingerDots = selectedFingerDots.map(dot => 
+            { return dot.isVisible === "visible" ? <div className={`dot ${dot.guitarString} visible`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div> : <div className={`dot ${dot.guitarString}`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div>})
+
+          
+             
+
+             return renderedFingerDots;
+
 
 
 
@@ -133,17 +141,17 @@ const ChordDiagram = () => {
 
         
 
-        for (let i in chordDots) {
+       
 
-            const renderedFingerDots = fingerDots.map(dot => 
-                { return i.fret === dot.fret ? <div className={`dot ${dot.guitarString} visible`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div> : <div className={`dot ${dot.guitarString}`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div>})
+            // const renderedFingerDots = fingerDots.map(dot => 
+            //     { return i.fret === dot.fret ? <div className={`dot ${dot.guitarString} visible`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div> : <div className={`dot ${dot.guitarString}`} id={`${dot.guitarString}-${dot.fret}`} key={nanoid()}></div>})
   
               
                  
   
-                 return renderedFingerDots;
+            //      return renderedFingerDots;
 
-        }
+        
 
 
 
