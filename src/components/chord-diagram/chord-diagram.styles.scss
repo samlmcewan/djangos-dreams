@@ -110,6 +110,7 @@
 			height: inherit;
 
 			.dot {
+				visibility: hidden;
 				width: 12.5%;
 				height: 10%;
 				border-radius: 50%;
@@ -119,6 +120,10 @@
 				margin-right: 6.15%;
 				margin-bottom: 6%;
 				margin-top: 6.25%;
+			}
+
+			.visible {
+				visibility: visible;
 			}
 
 			.e6 {
