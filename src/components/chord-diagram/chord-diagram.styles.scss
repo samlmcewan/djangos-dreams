@@ -44,6 +44,10 @@
 		padding-bottom: 0.5vw;
 		font-size: 2vw;
 
+		.hidden {
+			visibility: hidden;
+		}
+
 		#e6xo {
 			margin-left: -2%;
 		}
@@ -163,10 +167,10 @@
 			margin-left: -5%;
 		}
 		.fret-title {
-			margin-top: 9.5%;
+			margin-top: 12%;
 		}
 		.first-fret-number {
-			margin-top: 12%;
+			margin-top: 14.5%;
 			margin-left: -4%;
 		}
 
@@ -182,10 +186,7 @@
 
 		.string-x-o-container {
 			width: auto;
-
-			.string-char .hidden {
-				visibility: hidden;
-			}
+			font-size: 4vw;
 		}
 	}
 }

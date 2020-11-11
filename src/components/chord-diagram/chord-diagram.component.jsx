@@ -76,7 +76,7 @@ const ChordDiagram = (chord) => {
         e1.xo = positions[5];
 
         // map over stringXOs array xo values and conditionally render X or O or nothing 
-        return stringXOs.map((o) => o.xo === 'x' || o.xo === 'o' ? <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div> : <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}></div> )
+        return stringXOs.map((o) => o.xo === 'x' || o.xo === 'o' ? <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div> : <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}>x</div> )
         };
 
     const renderedFingerDots = getChordDots(fingerPositions);
