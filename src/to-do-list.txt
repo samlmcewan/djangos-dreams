@@ -5,3 +5,10 @@ chord diagrams on rollover
 homepage with title, photo, sound preview (from youtube?) on rollover. click to take to chord charts single page 
 
 fix lower triangle line of quarter box triangle responsive issue 
+
+
+make build your own chord chart functionaloty 
+
+make build your own chord diagram(s) functionality 
+
+make save/download/store (user login/signup) chord charts and chord diagram functionality

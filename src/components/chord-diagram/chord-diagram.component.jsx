@@ -1,16 +1,21 @@
 import './chord-diagram.styles.scss';
 
-import {guitarStrings, frets, stringXOs, fingerDots} from '../../mock-data/chord-diagram-data.js';
+import {guitarStrings, frets, stringXOs, fingerDots} from '../../app-data/chord-diagram-data.js';
 
 import { nanoid } from 'nanoid';
 
-const ChordDiagram = () => {
+const ChordDiagram = (chord) => {
+
+    const fingerPositions = chord.positions;
+
+    const firstFret = chord.firstFret;
+
+    const chordName = chord.chordName;
 
     // render guitar string lines
     const renderedStrings = guitarStrings.map(guitarString => <div className="guitar-string" id={guitarString} key={nanoid()}></div>);
     // render guitar frets
     const renderedFrets = frets.map(fret => <div className="fret" id={fret} key={nanoid()}></div>);
-
 
     const getChordDots = (positions) => {
         // filter out each guitar string from fingerdots array 
@@ -20,8 +25,6 @@ const ChordDiagram = () => {
         const g3 = fingerDots.filter(dot => dot.guitarString === 'g3');
         const b2 = fingerDots.filter(dot => dot.guitarString === 'b2');
         const e1 = fingerDots.filter(dot => dot.guitarString === 'e1');
-
-        // console.log(e6);
                
         // filter through dots that match position fret and push to new array chordDots
         let chordDots = [];
@@ -47,7 +50,6 @@ const ChordDiagram = () => {
 
         // assign visible values to dots in fingerDots that match the value of the strFret value in chordDotsStrFret array 
         const selectedFingerDots = fingerDots.map((o) => chordDotsStrFret.includes(o.strFret) ? Object.assign({}, o, {isVisible: 'visible'}) : o);
-        // console.log(selectedFingerDots);
 
         // map selectedFingerDots and conditionally render visible class
         const renderedFingerDots = selectedFingerDots.map(dot => 
@@ -56,14 +58,9 @@ const ChordDiagram = () => {
              return renderedFingerDots;
         }
 
-        let renderedFingerDots = getChordDots('2x12ox');
-
-
     const getXos = (positions) => { 
 
         // assign position values to xo key value 
-        
-        
         const e6 = stringXOs[0];
         const a5 = stringXOs[1]; // {str: "a5", xo: "x"}
         const d4 = stringXOs[2];
@@ -80,20 +77,17 @@ const ChordDiagram = () => {
 
         // map over stringXOs array xo values and conditionally render X or O or nothing 
         return stringXOs.map((o) => o.xo === 'x' || o.xo === 'o' ? <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div> : <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}></div> )
+        };
 
-        //    return stringXOs.map((o) => {if (o.xo === !NaN) {return <div className='string-char hidden' id={`${o.str}xo`} key={nanoid()}> </div>} else {return <div className='string-char' id={`${o.str}xo`} key={nanoid()}>{o.xo}</div>}})  
-        }
+    const renderedFingerDots = getChordDots(fingerPositions);
 
-        
-    ;
-    const renderedStringXOs = getXos('2x12ox');
-   
+    const renderedStringXOs = getXos(fingerPositions);
 
     return (
         <div className="chord-diagram-container">
             <div className="fret-title"><em>Fret</em></div>
-            <div className="first-fret-number"><em>5</em></div>
-            <div className="chord-name">F#m7♭5</div>
+            <div className="first-fret-number"><em>{firstFret}</em></div>
+            <div className="chord-name">{chordName}</div>
             <div className="string-x-o-container">
             {renderedStringXOs}
             </div>
@@ -105,15 +99,9 @@ const ChordDiagram = () => {
                     {renderedFrets}
                     </div>
                     {renderedStrings}
-                    
-                
                 </div>
-                
-                    
             </div>
     );
-
-
 }
 
 export default ChordDiagram;
