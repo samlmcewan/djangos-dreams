@@ -3,7 +3,7 @@ import './chord-box.styles.scss';
 
 const ChordBox = ({note}) => {
     // add conditional statement here saying if note is whole box do below, if not make another return statement for trianlge/half boxes
-    if (typeof note === 'object') { 
+    if (note.chordOne) { 
 
         if (note.chordTwoShort) {
 
@@ -19,13 +19,13 @@ const ChordBox = ({note}) => {
                 <div className="chord-box-split">
     
                     <div className="chordbox-Left">
-                        <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne }} /></p>
+                        <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne.chordName }} /></p>
                     </div>
                     
                         <div className='quarter-triangle'></div>
     
                     <div className="chordbox-quarter">
-                        <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwoShort }} /></p>
+                        <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwoShort.chordName }} /></p>
                     </div>
                     
                 </div>
@@ -45,13 +45,13 @@ const ChordBox = ({note}) => {
             <div className="chord-box-split">
 
                 <div className="chordbox-Left">
-                    <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne }} /></p>
+                    <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne.chordName }} /></p>
                 </div>
                 
                     <div className="half-line"></div>
 
                 <div className="chordbox-right">
-                    <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwo }} /></p>
+                    <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwo.chordName }} /></p>
                 </div>
                 
             </div>
@@ -62,7 +62,7 @@ const ChordBox = ({note}) => {
 
     return (
         <div className="chord-box">
-            <p className="chord-note long-note"><span dangerouslySetInnerHTML={{ __html: note }} /></p>
+            <p className="chord-note long-note"><span dangerouslySetInnerHTML={{ __html: note.chord }} /></p>
         </div>
     );
 
@@ -71,7 +71,7 @@ else {
     
     return (
         <div className="chord-box">
-            <p className="chord-note"><span dangerouslySetInnerHTML={{ __html: note }} /></p>
+            <p className="chord-note"><span dangerouslySetInnerHTML={{ __html: note.chord }} /></p>
         </div>
     );
 

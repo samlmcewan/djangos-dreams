@@ -7,17 +7,17 @@ import './App.css';
 
 const songs = SongData;
 
-const positions = '2x121x';
-const firstFret = '1';
-const chordName = 'F#m7♭5'
+// const positions = '2x121x';
+// const firstFret = '1';
+// const chordName = 'F#m7♭5'
 
-const positions2 = 'x5xooo';
-const firstFret2 = '1';
-const chordName2 = 'Em/D';
+// const positions2 = 'x5xooo';
+// const firstFret2 = '1';
+// const chordName2 = 'Em/D';
 
-const positions3 = '2123xx';
-const firstFret3 = '5';
-const chordName3 = 'B♭7'
+// const positions3 = '2123xx';
+// const firstFret3 = '5';
+// const chordName3 = 'B♭7'
 
 function App() {
   return (
@@ -29,9 +29,7 @@ function App() {
       <main className="App-main">
       <div className='container-main'>
       <ChordChartContainer songs={songs} />
-      <ChordDiagram positions={positions} firstFret={firstFret} chordName={chordName} />
-      <ChordDiagram positions={positions2} firstFret={firstFret2} chordName={chordName2} />
-      <ChordDiagram positions={positions3} firstFret={firstFret3} chordName={chordName3} />
+      
       </div>
       </main>
     </div>

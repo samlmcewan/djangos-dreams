@@ -2,12 +2,12 @@ const SongData = [
     {   
         title: "After You've Gone",
         year: 1936,
-        chords: ['C', '%', 'Cm', '%', 'G', '%', 'E7', '%', 'A7', '%', 'D7', '%', 'G', '%', 'G7', '%', 'C', '%', 'Cm', '%', 'G', '%', 'E7', '%', 'Am', 'E7', 'Am', 'Cm', 'G', 'B7', 'Em', 'E<sup>o</sup>', 'G', '%', 'Am7', 'D7', 'G', '%', '%', 'G7']
+        chords: [{chord: 'C', positions: 'x13331', firstFret: '3', chordName: 'C'}, {chord: '%'}, {chord: 'Cm', positions: 'x13321', firstFret: '', chordName: 'Cm'}, {chord: '%'}, {chord: 'G'}, {chord: '%'}, {chord: 'E7'}, {chord: '%'}, {chord: 'A7'}, {chord: '%'}, {chord: 'D7'}, {chord: '%'}, {chord: 'G'}, {chord: '%'}, {chord: 'G7'}, {chord: '%'}, {chord: 'C'}, {chord: '%'}, {chord: 'Cm'}, {chord: '%'}, {chord:'G'}, {chord: '%'}, {chord: 'E7'}, {chord: '%'}, {chord: 'Am'}, {chord: 'E7'}, {chord: 'Am'}, {chord: 'Cm'}, {chord: 'G'}, {chord: 'B7'}, {chord:'Em'}, {chord: 'E<sup>o</sup>'}, {chord: 'G'}, {chord: '%'}, {chord: 'Am7'}, {chord: 'D7'}, {chord: 'G'}, {chord: '%'}, {chord: '%'}, {chord: 'G7'}]
     },
     {   
         title: "Nagasaki",
         year: 1936,
-        chords: [{chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C', 'F', 'Fm', 'C', 'C7', 'F', 'Fm', {chordOne: 'C', chordTwo: 'Am'}, {chordOne: 'D7', chordTwo:'G7'}, {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C']
+        chords: [{chordOne: {chord: 'C', positions: 'x13331', firstFret: '3', chordName: 'C'}, chordTwo: {chord: 'C#<sup>o</sup>', positions: 'x13331', firstFret: '4', chordName: 'C#<sup>o</sup>'}}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C', 'F', 'Fm', 'C', 'C7', 'F', 'Fm', {chordOne: 'C', chordTwo: 'Am'}, {chordOne: 'D7', chordTwo:'G7'}, {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/D', {chordOne: 'C', chordTwo: 'C#<sup>o</sup>'}, 'G7/B', {chordOne: 'C', chordTwo: 'E7'}, {chordOne:'F', chordTwo:'Fm'}, {chordOne: 'C', chordTwo:'G7'}, 'C']
     },
     {   
         title: "Coucou",
