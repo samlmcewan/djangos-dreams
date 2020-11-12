@@ -3,75 +3,72 @@ import './chord-box.styles.scss';
 
 const ChordBox = ({note}) => {
     // add conditional statement here saying if note is whole box do below, if not make another return statement for trianlge/half boxes
-    if (note.chordOne) { 
+    
+    
+    // if box split
+    if (note.chordName1) { 
+
+        // if box quarter
 
         if (note.chordTwoShort) {
 
             return (
-                // <div className="chord-box">
-                //     <div className="chord-box-half-one">
-                //         <p className="chord-note">{note.chordOne}</p>
-                //     </div>
-                //     <div className="chord-box-half-two">
-                //         <p className="chord-note">{note.chordTwo}</p>
-                //     </div>
-                // </div>
                 <div className="chord-box-split">
     
                     <div className="chordbox-Left">
-                        <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne.chordName }} /></p>
+                        <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                     </div>
                     
                         <div className='quarter-triangle'></div>
     
                     <div className="chordbox-quarter">
-                        <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwoShort.chordName }} /></p>
+                        <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                     </div>
                     
                 </div>
             );
 
-        } else {
+        } 
+        // else if split in half
+        else {
 
         return (
-            // <div className="chord-box">
-            //     <div className="chord-box-half-one">
-            //         <p className="chord-note">{note.chordOne}</p>
-            //     </div>
-            //     <div className="chord-box-half-two">
-            //         <p className="chord-note">{note.chordTwo}</p>
-            //     </div>
-            // </div>
             <div className="chord-box-split">
 
                 <div className="chordbox-Left">
-                    <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordOne.chordName }} /></p>
+                    <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                 </div>
                 
                     <div className="half-line"></div>
 
                 <div className="chordbox-right">
-                    <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordTwo.chordName }} /></p>
+                    <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                 </div>
                 
             </div>
         );
         }
 
-} else if (note.length > 4) {
+}
+// else if full box
+// else if long note name
+
+else if (note.length > 4) {
 
     return (
         <div className="chord-box">
-            <p className="chord-note long-note"><span dangerouslySetInnerHTML={{ __html: note.chord }} /></p>
+            <p className="chord-note long-note"><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 
 }
+
+// else normal full box 
 else {
     
     return (
         <div className="chord-box">
-            <p className="chord-note"><span dangerouslySetInnerHTML={{ __html: note.chord }} /></p>
+            <p className="chord-note"><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 

@@ -87,7 +87,7 @@ const ChordDiagram = (chord) => {
         <div className="chord-diagram-container">
             <div className="fret-title"><em>Fret</em></div>
             <div className="first-fret-number"><em>{firstFret}</em></div>
-            <div className="chord-name">{chordName}</div>
+            <div className="chord-name"><span dangerouslySetInnerHTML={{ __html: chordName }} /></div>
             <div className="string-x-o-container">
             {renderedStringXOs}
             </div>
