@@ -1,7 +1,7 @@
 import React from 'react';
 import './chord-box.styles.scss';
 
-const ChordBox = ({note}) => {
+const ChordBox = ({note, onClick}) => {
     // add conditional statement here saying if note is whole box do below, if not make another return statement for trianlge/half boxes
     
     
@@ -14,16 +14,17 @@ const ChordBox = ({note}) => {
 
             return (
                 <div className="chord-box-split">
-    
-                    <div className="chordbox-Left">
-                        <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
+                        <div className='quarter-triangle'></div>
+                    <div className="chordbox-quarter">
+                        <p className="chord-note half-right" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                     </div>
                     
-                        <div className='quarter-triangle'></div>
+                        
     
-                    <div className="chordbox-quarter">
-                        <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
+                    <div className="chordbox-Left">
+                        <p className="chord-note half-left" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                     </div>
+                    
                     
                 </div>
             );
@@ -34,16 +35,17 @@ const ChordBox = ({note}) => {
 
         return (
             <div className="chord-box-split">
-
-                <div className="chordbox-Left">
-                    <p className="chord-note half-left"><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
+                <div className="chordbox-right">
+                    <p className="chord-note half-right" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                 </div>
+
+                
                 
                     <div className="half-line"></div>
-
-                <div className="chordbox-right">
-                    <p className="chord-note half-right"><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
+                <div className="chordbox-Left">
+                    <p className="chord-note half-left" onClick={onClick} ><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                 </div>
+                
                 
             </div>
         );
@@ -57,7 +59,7 @@ else if (note.length > 4) {
 
     return (
         <div className="chord-box">
-            <p className="chord-note long-note"><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
+            <p className="chord-note long-note" onClick={onClick}  ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 
@@ -68,7 +70,7 @@ else {
     
     return (
         <div className="chord-box">
-            <p className="chord-note"><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
+            <p className="chord-note" onClick={onClick} ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 
