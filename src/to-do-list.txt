@@ -14,3 +14,9 @@ make build your own chord diagram(s) functionality
 make save/download/store (user login/signup) chord charts and chord diagram functionality
 
 add a key/legend for chord cymbols diminished, sharp flat % etc 
+
+check voicings of A/c#, A7#5
+
+change edim to e half dim? (chordName)
+
+annotate/comment all code 

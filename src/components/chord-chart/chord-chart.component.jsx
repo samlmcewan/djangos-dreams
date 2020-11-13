@@ -23,7 +23,7 @@ import './chord-chart.styles.scss';
 
 const ChordChart = ({chords, title, year}) => {
 
-        const [visible, setVisible] = useState(true);
+        const [visible, setVisible] = useState(false);
         
         // const chordBoxes = chords.map(chord =>  <ChordBox note={chord} key={nanoid()} onClick={() => setVisible(!visible)}>{visible && <ChordDiagram positions={positions} firstFret={firstFret} chordName={chordName} />}</ChordBox>    );
         const chordBoxes = chords.map(chord => <ChordBox note={chord} key={nanoid()}  /> );
