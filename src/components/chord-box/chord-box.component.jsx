@@ -59,7 +59,7 @@ else if (note.length > 4) {
 
     return (
         <div className="chord-box">
-            <p className="chord-note long-note" onClick={onClick}  ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
+            <p className="chord-note long-note" onClick={onClick}   ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 

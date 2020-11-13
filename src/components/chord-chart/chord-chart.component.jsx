@@ -11,18 +11,29 @@ import './chord-chart.styles.scss';
 const ChordChart = ({chords, title, year}) => {
 
     const [visible, setVisible] = useState(false);
+    let [chordDiagramId, setChordId] = useState(null);
+
+    
+    
+    const setChordDiagram = (chordId) => {
+        chordDiagramId = chordId;
+        setVisible(!visible);
+        setChordId(chordDiagramId);
+    }
+
+    // const [chordId, setChordId] = useState();
 
     
 
     // onClick={() => setVisible(!visible)}
 
         
-        const chordBoxes = chords.map(chord => <ChordBox  onClick={() => setVisible(!visible)} note={chord} key={nanoid()} /> );
+        const chordBoxes = chords.map(chord => <ChordBox onClick={() => setChordDiagram(chord.id)} note={chord} key={nanoid()} /> );
 
         // make objects from objects with two chords in them in the chords array, assign all chord objects to newChordsArray
         const getWholeChordObjs = (arr) => {
             let newChordsArray = [];
-            let chordObj = {chordName: 'name', positions: 'positions', firstFret: 'firstFret'};
+            let chordObj = {chordName: 'name', positions: 'positions', firstFret: 'firstFret', id: 'id'};
             for (let obj of arr) {
                 if (obj.chordName1) {
                     const newobj = Object.create(chordObj);
@@ -46,14 +57,15 @@ const ChordChart = ({chords, title, year}) => {
 
         const newChords = getWholeChordObjs(chords);
 
-        const ChordDiagrams = newChords.map(chord => chord.positions ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} key={nanoid()}/> : null );
+        const ChordDiagrams = newChords.map(chord => visible && chord.positions && chordDiagramId === chord.id ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} key={nanoid()}/> : null );
 
+        // const chosenChordDiagram  = ChordDiagrams.filter(chord=>chord[0]);
+        // {ChordDiagrams.map(diagram => visible && diagram)}
         return (
             <div className="chord-chart-single">
                 <div className='chord-chart-heading'>{title} ({year})</div>
                 <div className="chord-diagram-container-chart">
-                {visible && ChordDiagrams}
-            
+                {ChordDiagrams}
                 </div>
                 <div className='chord-chart'>
                 {chordBoxes }
