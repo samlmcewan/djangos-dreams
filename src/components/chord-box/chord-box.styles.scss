@@ -32,16 +32,6 @@ p {
 	overflow: hidden;
 	position: relative;
 
-	// .half-left {
-	// 	text-align: left;
-	// 	padding-top: 0%;
-	// }
-
-	// .half-right {
-	// 	text-align: right;
-	// 	padding-bottom: 0;
-	// }
-
 	// .half-line {
 	// 	// border-top: 1px solid white;
 	// 	width: 12.5%;
@@ -95,6 +85,11 @@ p {
 
 	.chord-note {
 		padding-top: 100%;
+		cursor: pointer;
+	}
+
+	.long-note {
+		font-size: 1em;
 	}
 }
 
@@ -114,6 +109,14 @@ p {
 	border: 1px solid white;
 	overflow: hidden;
 	position: relative;
+
+	.long-note {
+		font-size: 0.65rem;
+	}
+
+	p {
+		cursor: pointer;
+	}
 
 	.quarter-triangle {
 		height: 112.5%;

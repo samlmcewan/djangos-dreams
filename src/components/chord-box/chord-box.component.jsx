@@ -12,6 +12,26 @@ const ChordBox = ({note, onClick}) => {
 
         if (note.chordTwoShort) {
 
+            if (note.chordName2.length > 3) {
+                return (
+                    <div className="chord-box-split">
+                            <div className='quarter-triangle'></div>
+                        <div className="chordbox-quarter">
+                            <p className="chord-note half-right long-note" onClick={() => onClick(note.id2)} key={note.id2}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
+                        </div>
+                        
+                            
+        
+                        <div className="chordbox-Left">
+                            <p className="chord-note half-left" onClick={() => onClick(note.id1)} key={note.id1}><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
+                        </div>
+                        
+                        
+                    </div>
+                );
+
+            } else 
+
             return (
                 <div className="chord-box-split">
                         <div className='quarter-triangle'></div>
@@ -32,6 +52,7 @@ const ChordBox = ({note, onClick}) => {
         } 
         // else if split in half
         else {
+            
 
         return (
             <div className="chord-box-split">
@@ -55,7 +76,7 @@ const ChordBox = ({note, onClick}) => {
 // else if full box
 // else if long note name
 
-else if (note.length > 4) {
+else if (note.chordName.length > 4) {
 
     return (
         <div className="chord-box">
