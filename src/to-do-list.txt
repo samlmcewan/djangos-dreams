@@ -20,3 +20,9 @@ check voicings of A/c#, A7#5
 change edim to e half dim? (chordName)
 
 annotate/comment all code 
+
+make all chord digrams render properly (give more unique id's in data.js?) 
+
+decide how digrams will be displayed, enable click off to close, enable clicking another chord renders it instead of just closing the one thats open 
+
+fix fret title and number in chord diagram 

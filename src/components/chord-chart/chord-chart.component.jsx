@@ -80,8 +80,10 @@ const ChordChart = ({chords, title, year}) => {
                 {uniqueChords}
                 </div>
                 <div className='chord-chart'>
+                
                 {chordBoxes }
                 </div>
+                
             </div>
          
         );
