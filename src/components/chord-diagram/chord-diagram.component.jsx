@@ -4,7 +4,7 @@ import {guitarStrings, frets, stringXOs, fingerDots} from '../../app-data/chord-
 
 import { nanoid } from 'nanoid';
 
-const ChordDiagram = (chord, isVisible) => {
+const ChordDiagram = (chord) => {
 
     const fingerPositions = chord.positions;
 
