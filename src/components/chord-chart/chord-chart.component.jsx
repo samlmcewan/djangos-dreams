@@ -12,13 +12,16 @@ const ChordChart = ({chords, title, year}) => {
 
     const [visible, setVisible] = useState(false);
     let [chordDiagramId, setChordId] = useState(null);
+    let [chordDiagramId2, setChordId2] = useState(null);
 
     
     
-    const setChordDiagram = (chordId) => {
+    const setChordDiagram = (chordId, chordId2) => {
         chordDiagramId = chordId;
+        chordDiagramId2 = chordId2;
         setVisible(!visible);
         setChordId(chordDiagramId);
+        setChordId2(chordDiagramId2);
     }
 
     // const [chordId, setChordId] = useState();
@@ -28,7 +31,7 @@ const ChordChart = ({chords, title, year}) => {
     // onClick={() => setVisible(!visible)}
 
         
-        const chordBoxes = chords.map(chord => <ChordBox onClick={() => setChordDiagram(chord.id)} note={chord} key={nanoid()}/> );
+        const chordBoxes = chords.map(chord => chord.id ? <ChordBox onClick={setChordDiagram} note={chord} key={chord.id}/> : chord.id1 ? <ChordBox onClick={setChordDiagram} note={chord} /> : null);
 
         // make objects from objects with two chords in them in the chords array, assign all chord objects to newChordsArray
         const getWholeChordObjs = (arr) => {
@@ -67,7 +70,7 @@ const ChordChart = ({chords, title, year}) => {
         // const uniqueChords = [...new Set(newChords)];
         
 
-        const chordDiagrams = newChords.map(chord => visible && chord.positions && (chordDiagramId === chord.id) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : null );
+        const chordDiagrams = newChords.map(chord => (visible && chord.positions && (chordDiagramId === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : (visible && chord.positions && (chordDiagramId2 === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : null );
 
         const uniqueChords = chordDiagrams.find(chord => chord);
         console.log(uniqueChords);

@@ -16,13 +16,13 @@ const ChordBox = ({note, onClick}) => {
                 <div className="chord-box-split">
                         <div className='quarter-triangle'></div>
                     <div className="chordbox-quarter">
-                        <p className="chord-note half-right" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
+                        <p className="chord-note half-right" onClick={() => onClick(note.id2)} key={note.id2}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                     </div>
                     
                         
     
                     <div className="chordbox-Left">
-                        <p className="chord-note half-left" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
+                        <p className="chord-note half-left" onClick={() => onClick(note.id1)} key={note.id1}><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                     </div>
                     
                     
@@ -36,14 +36,14 @@ const ChordBox = ({note, onClick}) => {
         return (
             <div className="chord-box-split">
                 <div className="chordbox-right">
-                    <p className="chord-note half-right" onClick={onClick}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
+                    <p className="chord-note half-right" onClick={() => onClick(note.id2)} key={note.id2}><span dangerouslySetInnerHTML={{ __html: note.chordName2 }} /></p>
                 </div>
 
                 
                 
                     <div className="half-line"></div>
                 <div className="chordbox-Left">
-                    <p className="chord-note half-left" onClick={onClick} ><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
+                    <p className="chord-note half-left" onClick={() => onClick(note.id1)} key={note.id1} ><span dangerouslySetInnerHTML={{ __html: note.chordName1 }} /></p>
                 </div>
                 
                 
@@ -59,7 +59,7 @@ else if (note.length > 4) {
 
     return (
         <div className="chord-box">
-            <p className="chord-note long-note" onClick={onClick}   ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
+            <p className="chord-note long-note" onClick={() => onClick(note.id)} ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 
@@ -70,7 +70,7 @@ else {
     
     return (
         <div className="chord-box">
-            <p className="chord-note" onClick={onClick} ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
+            <p className="chord-note" onClick={() => onClick(note.id)} ><span dangerouslySetInnerHTML={{ __html: note.chordName }} /></p>
         </div>
     );
 
