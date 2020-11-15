@@ -8,6 +8,8 @@ import { nanoid } from 'nanoid';
 
 import './chord-chart.styles.scss';
 
+ 
+
 const ChordChart = ({chords, title, year}) => {
 
     const [visible, setVisible] = useState(false);
@@ -82,24 +84,28 @@ const ChordChart = ({chords, title, year}) => {
 
         const uniqueChords = chordDiagrams.find(chord => chord);
         console.log(uniqueChords);
-         
+
+        const invisibleDiv = visible && <div className='invisible-div-diagram' onClick={setChordDiagram}></div>;
+        
 
         return (
-            
+            <div>
+            {invisibleDiv}
+            <div className="chord-diagram-container-chart" onClick={setChordDiagram}>   
+                {uniqueChords}
+            </div>
             <div className="chord-chart-single">
-            {visible && <div className='invisible-div-diagram' onClick={setChordDiagram}></div>}
+            
                 <div className='chord-chart-heading'>{title} ({year})</div>
                     
-                    <div className="chord-diagram-container-chart" onClick={setChordDiagram}>
                     
-                    {uniqueChords}
-                    </div>
                 
                 <div className='chord-chart'>
                 
                 {chordBoxes }
                 </div>
                 
+            </div>
             </div>
          
         );

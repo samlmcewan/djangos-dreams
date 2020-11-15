@@ -1,16 +1,31 @@
+.invisible-div-container {
+	// position: sticky;
+	// min-width: 100vw;
+	// min-height: 100vh;
+	// z-index: 9999999;
+	// display: flex;
+	// justify-content: center;
+	// align-items: center;
+}
+
 .invisible-div-diagram {
-	width: 100vw;
-	height: 100vh;
+	min-width: 100vw;
+	min-height: 100vh;
 	background-color: #16181d80;
-	position: absolute;
+	position: fixed;
+	bottom: 0;
+	right: 0;
 	z-index: 9999999;
-	margin-top: -10vw;
-	margin-left: -20vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	// margin-top: -10vw;
+	// margin-left: -22vw;
 }
 
 @media only screen and (max-width: 680px) {
 	.invisible-div-diagram {
-		margin-left: -2vw;
+		// margin-left: -2vw;
 	}
 }
 
