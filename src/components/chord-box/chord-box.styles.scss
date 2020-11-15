@@ -28,12 +28,12 @@ p {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	border: 1px solid white;
+	border: 1px solid #ffffff80;
 	overflow: hidden;
 	position: relative;
 
 	// .half-line {
-	// 	// border-top: 1px solid white;
+	// 	// border-top: 1px solid #ffffff80;
 	// 	width: 12.5%;
 	// 	height: 12.5%;
 	// 	position: absolute;
@@ -42,7 +42,7 @@ p {
 	// 	&:after {
 	// 		content: "";
 	// 		position: absolute;
-	// 		border-top: 1px solid white;
+	// 		border-top: 1px solid #ffffff80;
 	// 		width: 200px;
 	// 		transform: rotate(135deg);
 	// 		transform-origin: 25% 25%;
@@ -111,7 +111,7 @@ p {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	border: 1px solid white;
+	border: 1px solid #ffffff80;
 	overflow: hidden;
 	position: relative;
 
@@ -136,7 +136,7 @@ p {
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		border: 2px solid white;
+		border: 2px solid #ffffff80;
 		overflow: hidden;
 		// position: absolute;
 		transform: rotate(45deg);
@@ -166,7 +166,7 @@ p {
 	}
 
 	.half-line {
-		// border-top: 1px solid white;
+		// border-top: 1px solid #ffffff80;
 		width: 12.5%;
 		height: 12.5%;
 		position: absolute;
@@ -175,7 +175,7 @@ p {
 		&:after {
 			content: "";
 			position: absolute;
-			border-top: 2px solid white;
+			border-top: 2px solid #ffffff80;
 			width: 185px;
 			transform: rotate(135deg);
 			transform-origin: 25% 25%;
@@ -190,7 +190,7 @@ p {
 	}
 
 	.short-line-top {
-		// border-top: 1px solid white;
+		// border-top: 1px solid #ffffff80;
 		// display: none;
 		width: 12.5%;
 		height: 12.5%;
@@ -200,7 +200,7 @@ p {
 		&:after {
 			content: "";
 			position: absolute;
-			border-top: 2px solid white;
+			border-top: 2px solid #ffffff80;
 			width: 112px;
 			transform: rotate(135deg);
 			transform-origin: 41.5% 10%;
@@ -215,7 +215,7 @@ p {
 	}
 
 	.short-line-bottom {
-		// border-top: 1px solid white;
+		// border-top: 1px solid #ffffff80;
 
 		width: 12.5%;
 		height: 12.5%;
@@ -225,7 +225,7 @@ p {
 		&:after {
 			content: "";
 			position: absolute;
-			border-top: 2px solid white;
+			border-top: 2px solid #ffffff80;
 			width: 112.5px;
 			transform: rotate(225deg);
 			transform-origin: 59% 2330%;

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
 import ChordBox from '../chord-box/chord-box.component';
-
 import ChordDiagram from '../chord-diagram/chord-diagram.component';
+// import useMousePosition from '../mouse-position/mouse-position'
 
 import { nanoid } from 'nanoid';
 
@@ -13,6 +13,14 @@ const ChordChart = ({chords, title, year}) => {
     const [visible, setVisible] = useState(false);
     let [chordDiagramId, setChordId] = useState(null);
     let [chordDiagramId2, setChordId2] = useState(null);
+
+    // const { posx, posy } = useMousePosition();
+
+    // console.log(`mouse position x: ${posx} y: ${posy}`);
+
+  
+    
+    
 
     
     
@@ -31,7 +39,7 @@ const ChordChart = ({chords, title, year}) => {
     // onClick={() => setVisible(!visible)}
 
         
-        const chordBoxes = chords.map(chord => chord.id ? <ChordBox onClick={setChordDiagram} note={chord} key={chord.id}/> : chord.id1 ? <ChordBox onClick={setChordDiagram} note={chord} /> : null);
+        const chordBoxes = chords.map(chord => chord.id ? <ChordBox onClick={setChordDiagram} note={chord} key={chord.id}/> : chord.id1 ? <ChordBox onClick={setChordDiagram} note={chord} key={nanoid()} /> : null);
 
         // make objects from objects with two chords in them in the chords array, assign all chord objects to newChordsArray
         const getWholeChordObjs = (arr) => {
@@ -77,11 +85,16 @@ const ChordChart = ({chords, title, year}) => {
          
 
         return (
+            
             <div className="chord-chart-single">
+            {visible && <div className='invisible-div-diagram' onClick={setChordDiagram}></div>}
                 <div className='chord-chart-heading'>{title} ({year})</div>
-                <div className="chord-diagram-container-chart">
-                {uniqueChords}
-                </div>
+                    
+                    <div className="chord-diagram-container-chart" onClick={setChordDiagram}>
+                    
+                    {uniqueChords}
+                    </div>
+                
                 <div className='chord-chart'>
                 
                 {chordBoxes }

@@ -1,3 +1,19 @@
+.invisible-div-diagram {
+	width: 100vw;
+	height: 100vh;
+	background-color: #16181d80;
+	position: absolute;
+	z-index: 9999999;
+	margin-top: -10vw;
+	margin-left: -20vw;
+}
+
+@media only screen and (max-width: 680px) {
+	.invisible-div-diagram {
+		margin-left: -2vw;
+	}
+}
+
 .chord-chart {
 	display: flex;
 	flex-direction: row;
@@ -6,7 +22,7 @@
 	align-items: flex-start;
 	width: 40em;
 	max-width: 90vw;
-	border: 1px solid white;
+	border: 1px solid #ffffff80;
 }
 
 .chord-chart-single {
@@ -28,9 +44,10 @@
 	background-color: #16181d;
 	width: fit-content;
 	position: absolute;
-
+	margin-top: -4px;
+	margin-left: -2px;
 	z-index: 9999999;
-	// position: absolute;
+	border-left: 2px solid #16181d;
 }
 
 .chord-chart-heading {
