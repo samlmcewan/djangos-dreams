@@ -1,5 +1,7 @@
 import React from 'react';
+
 import './chord-box.styles.scss';
+
 
 const ChordBox = ({note, onClick}) => {
     // add conditional statement here saying if note is whole box do below, if not make another return statement for trianlge/half boxes

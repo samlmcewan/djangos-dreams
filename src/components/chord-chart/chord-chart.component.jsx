@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import ChordBox from '../chord-box/chord-box.component';
 import ChordDiagram from '../chord-diagram/chord-diagram.component';
+
 // import useMousePosition from '../mouse-position/mouse-position'
 
 import { nanoid } from 'nanoid';

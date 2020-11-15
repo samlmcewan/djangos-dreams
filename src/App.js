@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h1>Django's Dreams</h1>
+      <h1>Djangos Dreams</h1>
       <p>Chord charts of classic Django Reinhardt numbers</p>
       </header>
       <main className="App-main">
