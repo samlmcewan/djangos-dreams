@@ -156,7 +156,7 @@ const SongData = [
             {chordName1: 'Em', positions1: 'o22ooo', firstFret1: '1', id1: nanoid(), chordName2: 'F#7', positions2: '2123xx', firstFret2: '2', id2: nanoid(), chordTwoShort: true}, 
             {chordName: 'F7', positions: '2123xx', firstFret: '1', id: nanoid()}, 
             {chordName: 'Bm', positions: 'x13321', firstFret: '2', id: nanoid()}, 
-            {chordName: 'Gm6', positions2: 'xx313x', firstFret2: '3', id: nanoid()}, 
+            {chordName: 'Gm6', positions: 'xx313x', firstFret2: '3', id: nanoid()}, 
             {chordName: 'A7', positions: '2123xx', firstFret: '4', id: nanoid()}, 
             {chordName: '-', id: nanoid()}, 
             {chordName1: 'Em', positions1: 'x13321', firstFret1: '7', id1: nanoid(), chordName2: 'Em7', positions2: 'x131211', firstFret2: '7', id2: nanoid()}, 
