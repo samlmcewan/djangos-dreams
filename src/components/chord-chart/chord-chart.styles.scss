@@ -13,6 +13,11 @@
 	padding: 40px;
 	// margin-right: auto;
 }
+@media only screen and (max-width: 680px) {
+	.chord-chart-single {
+		max-height: 100vh;
+	}
+}
 
 // .chord-chart-single:last-child {
 // 	// background-color: goldenrod;

@@ -26,3 +26,6 @@ make all chord digrams render properly (give more unique id's in data.js?)
 decide how digrams will be displayed, enable click off to close, enable clicking another chord renders it instead of just closing the one thats open 
 
 fix fret title and number in chord diagram 
+
+
+add long-note class to mobile size long chord names 
