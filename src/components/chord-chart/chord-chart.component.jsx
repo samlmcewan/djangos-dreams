@@ -7,6 +7,8 @@ import ChordDiagram from '../chord-diagram/chord-diagram.component';
 
 import { nanoid } from 'nanoid';
 
+import { motion } from "framer-motion";
+
 import './chord-chart.styles.scss';
 
  
@@ -21,7 +23,14 @@ const ChordChart = ({chords, title, year}) => {
 
     // console.log(`mouse position x: ${posx} y: ${posy}`);
 
-  
+    const chordDiagramvariants = {
+        visible: { opacity: 1, transition: {
+            delayChildren: 0.5
+          }},
+        hidden: { opacity: 0},
+      }
+      
+      
     
     
 
@@ -91,9 +100,15 @@ const ChordChart = ({chords, title, year}) => {
 
         return (
             <div>
+            
             {invisibleDiv}
             <div className="chord-diagram-container-chart" onClick={setChordDiagram}>   
-                {uniqueChords}
+            <motion.div
+            animate={visible ? "visible" : "hidden"}
+            variants={chordDiagramvariants}
+          >
+            {uniqueChords}
+            </motion.div>
             </div>
             <div className="chord-chart-single">
             
