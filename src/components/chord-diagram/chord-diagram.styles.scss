@@ -11,11 +11,21 @@
 	// border-radius: 2%;
 	// background-color: ;
 	box-shadow: 1px 1px 30px 3px #5f78a0;
+	-webkit-animation: fadeIn ease-in-out 0.8s;
 	animation: fadeIn ease-in-out 0.8s;
 	border-radius: 20%;
 	// border-bottom-left-radius: 20%;
 	// border-bottom-right-radius: 20%;
 
+	@-webkit-keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 100%;
+		}
+	}
 	@keyframes fadeIn {
 		0% {
 			opacity: 0;
@@ -34,11 +44,13 @@
 	.fret-title {
 		margin-top: 30.5%;
 		margin-left: -13.4%;
+		-webkit-animation: popDot ease-in-out .3s;
 		animation: popDot ease-in-out .3s;
 	}
 	.first-fret-number {
 		margin-top: 37%;
 		margin-left: -10.3%;
+		-webkit-animation: popDot ease-in-out .4s;
 		animation: popDot ease-in-out .4s;
 	}
 
@@ -62,6 +74,7 @@
 		justify-content: space-between;
 		padding-bottom: 0.5vw;
 		font-size: 2vw;
+		-webkit-animation: moveX ease-in-out 0.3s;
 		animation: moveX ease-in-out 0.3s;
 
 		.hidden {
@@ -74,27 +87,32 @@
 
 		#a5xo {
 			margin-left: 0.9%;
+			-webkit-animation: moveX ease-in-out 0.4s;
 			animation: moveX ease-in-out 0.4s;
 		}
 
 		#d4xo {
 			margin-left: .5%;
+			-webkit-animation: moveX ease-in-out 0.5s;
 			animation: moveX ease-in-out 0.5s;
 		}
 
 		#g3xo {
 			margin-left: 0.6%;
 			margin-right: 0.5%;
+			-webkit-animation: moveX ease-in-out 0.6s;
 			animation: moveX ease-in-out 0.6s;
 		}
 
 		#b2xo {
 			margin-right: 0.7%;
+			-webkit-animation: moveX ease-in-out 0.7s;
 			animation: moveX ease-in-out 0.7s;
 		}
 
 		#e1xo {
 			margin-right: -1.8%;
+			-webkit-animation: moveX ease-in-out 0.8s;
 			animation: moveX ease-in-out 0.8s;
 		}
 	}
@@ -138,7 +156,7 @@
 				-webkit-animation: moveX ease-in-out 0.65s;
 				animation: moveX ease-in-out 0.65s;
 			}
-			@keyframes moveX {
+			@-webkit-keyframes moveX {
 				0% {
 					opacity: 0;
 					transform: translatex(-400px);
@@ -151,7 +169,7 @@
 					transform: translatex(0px);
 				}
 			}
-			@-webkit-keyframes moveX {
+			@keyframes moveX {
 				0% {
 					opacity: 0;
 					transform: translatex(-400px);
@@ -194,8 +212,7 @@
 			-webkit-animation: moveY ease-in-out 0.9s;
 			animation: moveY ease-in-out 0.9s;
 		}
-
-		@keyframes moveY {
+		@-webkit-keyframes moveY {
 			0% {
 				opacity: 0;
 				transform: translatey(-400px);
@@ -208,7 +225,8 @@
 				transform: translatey(0px);
 			}
 		}
-		@-webkit-keyframes moveY {
+
+		@keyframes moveY {
 			0% {
 				opacity: 0;
 				transform: translatey(-400px);
