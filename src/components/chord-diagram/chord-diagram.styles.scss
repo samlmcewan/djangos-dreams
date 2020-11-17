@@ -107,6 +107,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		-webkit-animation: fadeIn ease-in-out 0.5s;
 		animation: fadeIn ease-in-out 0.5s;
 		border-radius: 1%;
 
@@ -121,23 +122,26 @@
 			.fret {
 				border-top: 2px solid white;
 				width: inherit;
+				-webkit-animation: moveX ease-in-out 0.2s;
 				animation: moveX ease-in-out 0.2s;
 				transform-origin: bottom center;
 			}
 			#fret-2 {
+				-webkit-animation: moveX ease-in-out 0.35;
 				animation: moveX ease-in-out 0.35;
 			}
 			#fret-3 {
+				-webkit-animation: moveX ease-in-out 0.5s;
 				animation: moveX ease-in-out 0.5s;
 			}
 			#fret-4 {
+				-webkit-animation: moveX ease-in-out 0.65s;
 				animation: moveX ease-in-out 0.65s;
 			}
 			@keyframes moveX {
 				0% {
 					opacity: 0;
 					transform: translatex(-400px);
-					// }
 				}
 				20% {
 					opacity: 0%;
@@ -145,7 +149,19 @@
 				100% {
 					opacity: 100%;
 					transform: translatex(0px);
-					// }
+				}
+			}
+			@-webkit-keyframes moveX {
+				0% {
+					opacity: 0;
+					transform: translatex(-400px);
+				}
+				20% {
+					opacity: 0%;
+				}
+				100% {
+					opacity: 100%;
+					transform: translatex(0px);
 				}
 			}
 		}
@@ -153,27 +169,46 @@
 		.guitar-string {
 			border-right: 2px solid white;
 			height: inherit;
+			-webkit-animation: moveY ease-in-out 0.15s 0s;
 			animation: moveY ease-in-out 0.15s 0s;
 			transform-origin: bottom center;
 		}
 
 		#a5 {
+			-webkit-animation: moveY ease-in-out 0.3s;
 			animation: moveY ease-in-out 0.3s;
 		}
 		#d4 {
+			-webkit-animation: moveY ease-in-out 0.45s;
 			animation: moveY ease-in-out 0.45s;
 		}
 		#g3 {
+			-webkit-animation: moveY ease-in-out 0.6s;
 			animation: moveY ease-in-out 0.6s;
 		}
 		#b2 {
+			-webkit-animation: moveY ease-in-out 0.75s;
 			animation: moveY ease-in-out 0.75s;
 		}
 		#e1 {
+			-webkit-animation: moveY ease-in-out 0.9s;
 			animation: moveY ease-in-out 0.9s;
 		}
 
 		@keyframes moveY {
+			0% {
+				opacity: 0;
+				transform: translatey(-400px);
+			}
+			20% {
+				opacity: 0%;
+			}
+			100% {
+				opacity: 100%;
+				transform: translatey(0px);
+			}
+		}
+		@-webkit-keyframes moveY {
 			0% {
 				opacity: 0;
 				transform: translatey(-400px);
@@ -216,7 +251,24 @@
 
 			.visible {
 				visibility: visible;
+				-webkit-animation: popDot ease-in-out 0.8s;
 				animation: popDot ease-in-out 0.8s;
+			}
+			@-webkit-keyframes popDot {
+				0% {
+					opacity: 0;
+					transform: scale(0);
+				}
+				85% {
+					opacity: 0;
+				}
+				90% {
+					transform: scale(1.2);
+				}
+				100% {
+					opacity: 100%;
+					transform: scale(1);
+				}
 			}
 
 			@keyframes popDot {
