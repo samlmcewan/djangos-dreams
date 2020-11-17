@@ -2,19 +2,12 @@ import ChordChartContainer from './components/chord-chart-container/chord-chart-
 
 import SongData from './app-data/data';
 
-import { Frame } from "framer";
-
 import logo from './DjangosDreamsLogo.png'
 
 import './App.css';
 
 const songs = SongData;
 
-const transition = {
-  loop: Infinity,
-  ease: "linear",
-  duration: 2
-}
 
 
 function App() {
