@@ -2,7 +2,6 @@
 
 homepage with title, photo, sound preview (from youtube?) on rollover. click to take to chord charts single page 
 
-
 make build your own chord chart functionaloty 
 
 make build your own chord diagram(s) functionality 
@@ -13,18 +12,16 @@ add a key/legend for chord cymbols diminished, sharp flat % etc
 
 check voicings of A/c#, A7#5
 
-change edim to e half dim? (chordName)
+change edim to e half dim? (chordName) nah 
 
 annotate/comment all code 
 
 animate chord diagrams showing, hovering over chords in chord charts
 
-
-
-
 add long-note class to mobile size long chord names 
-
 
 imporve chord voicings (major7, minor7 etx)
 
 light / dark mode
+
+favicon

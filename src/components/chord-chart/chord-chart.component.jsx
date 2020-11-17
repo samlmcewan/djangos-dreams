@@ -7,8 +7,6 @@ import ChordDiagram from '../chord-diagram/chord-diagram.component';
 
 import { nanoid } from 'nanoid';
 
-import { motion } from "framer-motion";
-
 import './chord-chart.styles.scss';
 
  
@@ -23,12 +21,7 @@ const ChordChart = ({chords, title, year}) => {
 
     // console.log(`mouse position x: ${posx} y: ${posy}`);
 
-    const chordDiagramvariants = {
-        visible: { opacity: 1, transition: {
-            delayChildren: 0.5
-          }},
-        hidden: { opacity: 0},
-      }
+    
       
       
     
@@ -90,7 +83,7 @@ const ChordChart = ({chords, title, year}) => {
         // const uniqueChords = [...new Set(newChords)];
         
 
-        const chordDiagrams = newChords.map(chord => (visible && chord.positions && (chordDiagramId === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : (visible && chord.positions && (chordDiagramId2 === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : null );
+        const chordDiagrams = newChords.map(chord => (visible && chord.positions && (chordDiagramId === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()} isVisible={visible}/> : (visible && chord.positions && (chordDiagramId2 === chord.id)) ? <ChordDiagram positions={chord.positions} firstFret={chord.firstFret} chordName={chord.chordName} id={chord.id} key={nanoid()}/> : null );
 
         const uniqueChords = chordDiagrams.find(chord => chord);
         console.log(uniqueChords);
@@ -103,12 +96,9 @@ const ChordChart = ({chords, title, year}) => {
             
             {invisibleDiv}
             <div className="chord-diagram-container-chart" onClick={setChordDiagram}>   
-            <motion.div
-            animate={visible ? "visible" : "hidden"}
-            variants={chordDiagramvariants}
-          >
             {uniqueChords}
-            </motion.div>
+        
+    
             </div>
             <div className="chord-chart-single">
             

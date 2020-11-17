@@ -11,6 +11,17 @@
 	// border-radius: 2%;
 	// background-color: ;
 	box-shadow: 1px 1px 30px 3px #888888;
+	animation: fadeIn ease-in-out 0.8s;
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 100%;
+		}
+	}
 
 	.fret-title,
 	.first-fret-number {
@@ -96,15 +107,75 @@
 			.fret {
 				border-top: 2px solid white;
 				width: inherit;
-				// opacity: 60%;
-				// padding-bottom: 20px;
+				animation: moveX ease-in-out 0.2s 0s;
+				transform-origin: bottom center;
+			}
+			#fret-2 {
+				animation: moveX ease-in-out 0.35s;
+			}
+			#fret-3 {
+				animation: moveX ease-in-out 0.5s;
+			}
+			#fret-4 {
+				animation: moveX ease-in-out 0.65s;
+			}
+			@keyframes moveX {
+				0% {
+					opacity: 0;
+					transform: translatex(-400px);
+					// }
+				}
+				20% {
+					opacity: 0%;
+				}
+				100% {
+					opacity: 100%;
+					transform: translatex(0px);
+					// }
+				}
 			}
 		}
 
 		.guitar-string {
 			border-right: 2px solid white;
 			height: inherit;
+			animation: moveY ease-in-out 0.15s 0s;
+			transform-origin: bottom center;
 		}
+
+		#a5 {
+			animation: moveY ease-in-out 0.3s;
+		}
+		#d4 {
+			animation: moveY ease-in-out 0.45s;
+		}
+		#g3 {
+			animation: moveY ease-in-out 0.6s;
+		}
+		#b2 {
+			animation: moveY ease-in-out 0.75s;
+		}
+		#e1 {
+			animation: moveY ease-in-out 0.9s;
+		}
+
+		@keyframes moveY {
+			0% {
+				opacity: 0;
+				transform: translatey(-400px);
+			}
+			20% {
+				opacity: 0%;
+			}
+			100% {
+				opacity: 100%;
+				transform: translatey(0px);
+			}
+		}
+
+		// .guitar-string &:hover {
+		// 	transform: translateX(200px);
+		// }
 
 		.finger-dots {
 			position: absolute;
@@ -117,6 +188,7 @@
 
 			.dot {
 				visibility: hidden;
+				// opacity: 0;
 				width: 12.5%;
 				height: 10%;
 				border-radius: 50%;
@@ -130,6 +202,23 @@
 
 			.visible {
 				visibility: visible;
+				animation: popDot ease-in-out 0.9s;
+			}
+			@keyframes popDot {
+				0% {
+					opacity: 0;
+					transform: scale(0);
+				}
+				85% {
+					opacity: 0;
+				}
+				90% {
+					transform: scale(1.2);
+				}
+				100% {
+					opacity: 100%;
+					transform: scale(1);
+				}
 			}
 
 			.e6 {
@@ -179,6 +268,8 @@
 		.chord-name {
 			margin: auto;
 			font-size: 5vw;
+			// padding-bottom: 0.5vw;
+			padding-top: 2vw;
 		}
 
 		.chord-diagram-box {
