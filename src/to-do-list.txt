@@ -25,3 +25,5 @@ imporve chord voicings (major7, minor7 etx)
 light / dark mode
 
 favicon
+
+MAKE SURE KEYFRAME ANIMATIONS ARE WITHIN THE RIGHT PARENT DIV SELECTOR IN CSS SO THEY WORK IN CHROME???!?!!!
