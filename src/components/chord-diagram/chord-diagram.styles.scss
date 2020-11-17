@@ -271,6 +271,8 @@
 				visibility: visible;
 				-webkit-animation: popDot ease-in-out 0.8s !important;
 				animation: popDot ease-in-out 0.8s !important;
+				-webkit-animation-name: popDot;
+				animation-name: popDot;
 			}
 			@-webkit-keyframes popDot {
 				0% {
