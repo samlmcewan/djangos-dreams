@@ -11,8 +11,8 @@
 	// border-radius: 2%;
 	// background-color: ;
 	box-shadow: 1px 1px 30px 3px #5f78a0;
-	-webkit-animation: fadeIn ease-in-out 0.8s;
-	animation: fadeIn ease-in-out 0.8s;
+	-webkit-animation: fadeIn ease-in-out 0.8s !important;
+	animation: fadeIn ease-in-out 0.8s !important;
 	border-radius: 20%;
 	// border-bottom-left-radius: 20%;
 	// border-bottom-right-radius: 20%;
@@ -44,14 +44,14 @@
 	.fret-title {
 		margin-top: 30.5%;
 		margin-left: -13.4%;
-		-webkit-animation: popDot ease-in-out .3s;
-		animation: popDot ease-in-out .3s;
+		-webkit-animation: popDot ease-in-out .3s !important;
+		animation: popDot ease-in-out .3s !important;
 	}
 	.first-fret-number {
 		margin-top: 37%;
 		margin-left: -10.3%;
-		-webkit-animation: popDot ease-in-out .4s;
-		animation: popDot ease-in-out .4s;
+		-webkit-animation: popDot ease-in-out .4s !important;
+		animation: popDot ease-in-out .4s !important;
 	}
 
 	.chord-name {
@@ -74,8 +74,8 @@
 		justify-content: space-between;
 		padding-bottom: 0.5vw;
 		font-size: 2vw;
-		-webkit-animation: moveX ease-in-out 0.3s;
-		animation: moveX ease-in-out 0.3s;
+		-webkit-animation: moveX ease-in-out 0.3s !important;
+		animation: moveX ease-in-out 0.3s !important;
 
 		.hidden {
 			visibility: hidden;
@@ -87,33 +87,33 @@
 
 		#a5xo {
 			margin-left: 0.9%;
-			-webkit-animation: moveX ease-in-out 0.4s;
-			animation: moveX ease-in-out 0.4s;
+			-webkit-animation: moveX ease-in-out 0.4s !important;
+			animation: moveX ease-in-out 0.4s !important;
 		}
 
 		#d4xo {
 			margin-left: .5%;
-			-webkit-animation: moveX ease-in-out 0.5s;
-			animation: moveX ease-in-out 0.5s;
+			-webkit-animation: moveX ease-in-out 0.5s !important;
+			animation: moveX ease-in-out 0.5s !important;
 		}
 
 		#g3xo {
 			margin-left: 0.6%;
 			margin-right: 0.5%;
-			-webkit-animation: moveX ease-in-out 0.6s;
-			animation: moveX ease-in-out 0.6s;
+			-webkit-animation: moveX ease-in-out 0.6s !important;
+			animation: moveX ease-in-out 0.6s !important;
 		}
 
 		#b2xo {
 			margin-right: 0.7%;
-			-webkit-animation: moveX ease-in-out 0.7s;
-			animation: moveX ease-in-out 0.7s;
+			-webkit-animation: moveX ease-in-out 0.7s !important;
+			animation: moveX ease-in-out 0.7s !important;
 		}
 
 		#e1xo {
 			margin-right: -1.8%;
-			-webkit-animation: moveX ease-in-out 0.8s;
-			animation: moveX ease-in-out 0.8s;
+			-webkit-animation: moveX ease-in-out 0.8s !important;
+			animation: moveX ease-in-out 0.8s !important;
 		}
 	}
 
@@ -125,8 +125,8 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		-webkit-animation: fadeIn ease-in-out 0.5s;
-		animation: fadeIn ease-in-out 0.5s;
+		-webkit-animation: fadeIn ease-in-out 0.5s !important;
+		animation: fadeIn ease-in-out 0.5s !important;
 		border-radius: 1%;
 
 		.fret-box {
@@ -140,21 +140,21 @@
 			.fret {
 				border-top: 2px solid white;
 				width: inherit;
-				-webkit-animation: moveX ease-in-out 0.2s;
-				animation: moveX ease-in-out 0.2s;
+				-webkit-animation: moveX ease-in-out 0.2s !important;
+				animation: moveX ease-in-out 0.2s !important;
 				transform-origin: bottom center;
 			}
 			#fret-2 {
-				-webkit-animation: moveX ease-in-out 0.35;
-				animation: moveX ease-in-out 0.35;
+				-webkit-animation: moveX ease-in-out 0.35 !important;
+				animation: moveX ease-in-out 0.35 !important;
 			}
 			#fret-3 {
-				-webkit-animation: moveX ease-in-out 0.5s;
-				animation: moveX ease-in-out 0.5s;
+				-webkit-animation: moveX ease-in-out 0.5s !important;
+				animation: moveX ease-in-out 0.5s !important;
 			}
 			#fret-4 {
-				-webkit-animation: moveX ease-in-out 0.65s;
-				animation: moveX ease-in-out 0.65s;
+				-webkit-animation: moveX ease-in-out 0.65s !important;
+				animation: moveX ease-in-out 0.65s !important;
 			}
 			@-webkit-keyframes moveX {
 				0% {
@@ -187,30 +187,30 @@
 		.guitar-string {
 			border-right: 2px solid white;
 			height: inherit;
-			-webkit-animation: moveY ease-in-out 0.15s 0s;
-			animation: moveY ease-in-out 0.15s 0s;
+			-webkit-animation: moveY ease-in-out 0.15s 0s !important;
+			animation: moveY ease-in-out 0.15s 0s !important;
 			transform-origin: bottom center;
 		}
 
 		#a5 {
-			-webkit-animation: moveY ease-in-out 0.3s;
-			animation: moveY ease-in-out 0.3s;
+			-webkit-animation: moveY ease-in-out 0.3s !important;
+			animation: moveY ease-in-out 0.3s !important;
 		}
 		#d4 {
-			-webkit-animation: moveY ease-in-out 0.45s;
-			animation: moveY ease-in-out 0.45s;
+			-webkit-animation: moveY ease-in-out 0.45s !important;
+			animation: moveY ease-in-out 0.45s !important;
 		}
 		#g3 {
-			-webkit-animation: moveY ease-in-out 0.6s;
-			animation: moveY ease-in-out 0.6s;
+			-webkit-animation: moveY ease-in-out 0.6s !important;
+			animation: moveY ease-in-out 0.6s !important;
 		}
 		#b2 {
-			-webkit-animation: moveY ease-in-out 0.75s;
-			animation: moveY ease-in-out 0.75s;
+			-webkit-animation: moveY ease-in-out 0.75s !important;
+			animation: moveY ease-in-out 0.75s !important;
 		}
 		#e1 {
-			-webkit-animation: moveY ease-in-out 0.9s;
-			animation: moveY ease-in-out 0.9s;
+			-webkit-animation: moveY ease-in-out 0.9s !important;
+			animation: moveY ease-in-out 0.9s !important;
 		}
 		@-webkit-keyframes moveY {
 			0% {
@@ -269,8 +269,8 @@
 
 			.visible {
 				visibility: visible;
-				-webkit-animation: popDot ease-in-out 0.8s;
-				animation: popDot ease-in-out 0.8s;
+				-webkit-animation: popDot ease-in-out 0.8s !important;
+				animation: popDot ease-in-out 0.8s !important;
 			}
 			@-webkit-keyframes popDot {
 				0% {
