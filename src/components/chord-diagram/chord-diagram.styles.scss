@@ -7,11 +7,14 @@
 	// padding-right: 4vw;
 	width: fit-content;
 	height: auto;
-	border: 2px solid #888888b9;
+	// border: 2px solid #888888b9;
 	// border-radius: 2%;
 	// background-color: ;
-	box-shadow: 1px 1px 30px 3px #888888;
+	box-shadow: 1px 1px 30px 3px #5f78a0;
 	animation: fadeIn ease-in-out 0.8s;
+	border-radius: 20%;
+	// border-bottom-left-radius: 20%;
+	// border-bottom-right-radius: 20%;
 
 	@keyframes fadeIn {
 		0% {
@@ -44,6 +47,7 @@
 		margin-left: -10%;
 		font-size: 3vw;
 		padding-bottom: 1vw;
+		padding-top: 1vw;
 		max-width: 17vw;
 		margin: auto;
 
