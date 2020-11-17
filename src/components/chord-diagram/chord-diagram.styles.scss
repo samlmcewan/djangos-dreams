@@ -31,10 +31,12 @@
 	.fret-title {
 		margin-top: 30.5%;
 		margin-left: -13.4%;
+		animation: popDot ease-in-out .3s;
 	}
 	.first-fret-number {
 		margin-top: 37%;
 		margin-left: -10.3%;
+		animation: popDot ease-in-out .4s;
 	}
 
 	.chord-name {
@@ -56,6 +58,7 @@
 		justify-content: space-between;
 		padding-bottom: 0.5vw;
 		font-size: 2vw;
+		animation: moveX ease-in-out 0.3s;
 
 		.hidden {
 			visibility: hidden;
@@ -67,23 +70,28 @@
 
 		#a5xo {
 			margin-left: 0.9%;
+			animation: moveX ease-in-out 0.4s;
 		}
 
 		#d4xo {
 			margin-left: .5%;
+			animation: moveX ease-in-out 0.5s;
 		}
 
 		#g3xo {
 			margin-left: 0.6%;
 			margin-right: 0.5%;
+			animation: moveX ease-in-out 0.6s;
 		}
 
 		#b2xo {
 			margin-right: 0.7%;
+			animation: moveX ease-in-out 0.7s;
 		}
 
 		#e1xo {
 			margin-right: -1.8%;
+			animation: moveX ease-in-out 0.8s;
 		}
 	}
 
@@ -95,6 +103,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		animation: fadeIn ease-in-out 0.5s;
 
 		.fret-box {
 			width: inherit;
@@ -107,11 +116,11 @@
 			.fret {
 				border-top: 2px solid white;
 				width: inherit;
-				animation: moveX ease-in-out 0.2s 0s;
+				animation: moveX ease-in-out 0.2s;
 				transform-origin: bottom center;
 			}
 			#fret-2 {
-				animation: moveX ease-in-out 0.35s;
+				animation: moveX ease-in-out 0.35;
 			}
 			#fret-3 {
 				animation: moveX ease-in-out 0.5s;
@@ -202,8 +211,9 @@
 
 			.visible {
 				visibility: visible;
-				animation: popDot ease-in-out 0.9s;
+				animation: popDot ease-in-out 0.8s;
 			}
+
 			@keyframes popDot {
 				0% {
 					opacity: 0;
