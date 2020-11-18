@@ -2,7 +2,7 @@ import ChordChartContainer from './components/chord-chart-container/chord-chart-
 
 import SongData from './app-data/data';
 
-import logo from './DjangosDreamsLogo.png'
+import logo from './DjangosDreamsLogoOutline.png'
 
 import './App.css';
 
