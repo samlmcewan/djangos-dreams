@@ -22,7 +22,7 @@ h1 {
 }
 
 #header-tagline {
-	margin-bottom: 1.8em;
+	margin-bottom: 4rem;
 }
 
 .App-link {
@@ -54,7 +54,7 @@ h1 {
 .App-logo {
 	width: 15vw;
 	/* padding: .2vw; */
-	padding-top: 3vw;
+	padding-top: 3rem;
 	margin-bottom: 0;
 	/* transform: rotate(20deg); */
 }
@@ -62,7 +62,7 @@ h1 {
 @media only screen and (max-width: 680px) {
 	.App-logo {
 		width: 25vw;
-		padding-top: 5vw;
+		/* padding-top: 5vw; */
 		/* transform: rotate(20deg); */
 	}
 }
