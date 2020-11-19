@@ -5,6 +5,9 @@ const SongData = [
     {   
         title: "After You've Gone",
         year: 1936,
+        bpm: '131',
+        songKey: 'G Major',
+        youtubeUrl: 'https://www.youtube.com/watch?v=BTH_Nn_TtDI',
         chords: [
             {chordName: 'C', positions: 'x13331', firstFret: '3', id: nanoid()}, 
             {chordName: '%', id: nanoid()}, 
@@ -51,6 +54,9 @@ const SongData = [
     {   
         title: "Nagasaki",
         year: 1936,
+        bpm: '117',
+        songKey: 'G Major',
+        youtubeUrl: 'https://www.youtube.com/watch?v=pUQN44doG9I',
         chords: [
         {chordName1: 'C', positions1: 'x13331', firstFret1: '3', id1: nanoid(), chordName2: 'C#<sup>o</sup>', positions2: 'x2414x', firstFret2: '4', id2: nanoid()},
         {chordName: 'G7/D', positions: 'x31211', firstFret: '3', id: nanoid()},
@@ -88,7 +94,10 @@ const SongData = [
     
     {   
         title: "Coucou",
-        year: 1936,
+        year: 1940,
+        bpm: '78',
+        songKey: 'A Minor',
+        youtubeUrl: 'https://www.youtube.com/watch?v=0WqmkSMpqvg',
         chords: [
             {chordName: 'C', positions: 'x13331', firstFret: '3', id: nanoid()},
             {chordName: '%', id: nanoid()},
@@ -125,7 +134,10 @@ const SongData = [
     },
     {   
         title: "Melodie Au Crepuscule (Twilights Melody)",
-        year: 1936,
+        year: 1946,
+        bpm: '99',
+        songKey: 'D Major',
+        youtubeUrl: 'https://www.youtube.com/watch?v=Ja3U-YR7FKw',
         chords: [
             {chordName1: 'Em', positions1: 'x13321', firstFret1: '7', id1: nanoid(), chordName2: 'Em7', positions2: 'x131211', firstFret2: '7', id2: nanoid()}, 
             {chordName: 'A7', positions: '2123xx', firstFret: '4', id: nanoid()}, 
@@ -172,6 +184,9 @@ const SongData = [
     {   
         title: "Georgia On My Mind",
         year: 1936,
+        bpm: '127',
+        songKey: 'G Minor',
+        youtubeUrl: 'https://www.youtube.com/watch?v=BqqpkQzQPns',
         chords: [
             {chordName: 'E♭', positions: 'x13331', firstFret: '6', id: nanoid()}, 
             {chordName: 'G7', positions: '2123xx', firstFret: '2', id: nanoid()}, 
@@ -210,6 +225,9 @@ const SongData = [
     {   
         title: "I Can't Give You Anything But Love",
         year: 1936,
+        bpm: '116',
+        songKey: 'G Major',
+        youtubeUrl: 'https://www.youtube.com/watch?v=BytMZa205dU',
         chords: [
             {chordName: 'G', positions: '133211', firstFret: '3', id: nanoid()}, 
             {chordName1: 'G/B', positions1: '31x34', firstFret1: '5', id1: nanoid(), chordName2: 'B♭<sup>o</sup>', positions2: '2x12xx', firstFret2: '5', id2: nanoid()}, 

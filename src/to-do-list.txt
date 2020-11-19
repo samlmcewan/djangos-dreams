@@ -24,6 +24,14 @@ imporve chord voicings (major7, minor7 etx)
 
 light / dark mode
 
-favicon
+add song bpm 
 
-MAKE SURE KEYFRAME ANIMATIONS ARE WITHIN THE RIGHT PARENT DIV SELECTOR IN CSS SO THEY WORK IN CHROME???!?!!!
+
+song info: 
+
+title
+year
+bpm
+song key
+preview 
+youtube link 

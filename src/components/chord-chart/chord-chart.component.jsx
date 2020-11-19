@@ -3,15 +3,21 @@ import React, {useState} from 'react';
 import ChordBox from '../chord-box/chord-box.component';
 import ChordDiagram from '../chord-diagram/chord-diagram.component';
 
-// import useMousePosition from '../mouse-position/mouse-position'
+import playIcon from '../../../src/play-arrow.png';
 
 import { nanoid } from 'nanoid';
+
+import ReactPlayer from 'react-player/lazy';
 
 import './chord-chart.styles.scss';
 
  
 
-const ChordChart = ({chords, title, year}) => {
+const ChordChart = ({chords, title, year, bpm, songKey, url}) => {
+
+   
+
+    
 
     const [visible, setVisible] = useState(false);
     let [chordDiagramId, setChordId] = useState(null);
@@ -101,13 +107,41 @@ const ChordChart = ({chords, title, year}) => {
     
             </div>
             <div className="chord-chart-single">
-            
-                <div className='chord-chart-heading'>{title} ({year})</div>
+                
+                <div className='chord-chart-heading'>{title}</div>
+                <div className='song-info-wrapper'>
+                <div className='song-info'>
+                    <p id='info-1'>Year: {year}</p> 
+                    <p>BPM: {bpm}</p>
+                    <p id='info-3'>Key: {songKey}</p>
+                    </div>
+                    <div className='player-wrapper'>
+                    <ReactPlayer
+                    className='react-player'
+                    // height='inherit'
+                    width='100%'
+                    height='30%'
+                    modestbranding='1'
+                    showinfo='0'
+                    // controls=true
+                    enablejsapi='1'
+                    color='#89afe5'
+                    light='true'
+                    url={url}
+                    // playIcon={playIcon}
+                    config={{
+                    youtube: {
+                        playerVars: { showinfo: 0}
+                    }
+                    }}
+                    />
                     
-                    
+                </div>
+                </div>
+                
+                
                 
                 <div className='chord-chart'>
-                
                 {chordBoxes }
                 </div>
                 
