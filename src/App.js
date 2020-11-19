@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
       <div className="swing"><img src={logo} className="App-logo" alt="logo" /></div>
-      <h1>Djangos Dreams</h1>
+      <h1>Django's Dreams</h1>
       <p id="header-tagline">Django Reinhardt chord charts with diagrams</p>
       </header>
       <main className="App-main">
