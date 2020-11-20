@@ -123,7 +123,7 @@ const ChordChart = ({chords, title, year, bpm, songKey, url}) => {
                     height='30%'
                     modestbranding='1'
                     showinfo='0'
-                    // controls=true
+                    controls='true'
                     enablejsapi='1'
                     color='#89afe5'
                     light='true'

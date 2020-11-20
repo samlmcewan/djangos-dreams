@@ -1,4 +1,5 @@
 import ChordChartContainer from './components/chord-chart-container/chord-chart-container.component';
+import Legend from './components/legend/legend.component'
 
 import SongData from './app-data/data';
 
@@ -20,6 +21,7 @@ function App() {
       </header>
       <main className="App-main">
       <div className='container-main'>
+     
       <ChordChartContainer songs={songs} />
       
       </div>

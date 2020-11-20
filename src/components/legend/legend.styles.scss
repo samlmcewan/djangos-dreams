@@ -1,0 +1,20 @@
+.legend-container {
+	width: 40em;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	// justify-content: space-evenly;
+	align-content: center;
+}
+
+.legend-item {
+	display: flex;
+	flex-direction: row;
+	// justify-content: space-around;
+	align-items: center;
+}
+
+.small-box {
+	width: 2em;
+}
